@@ -1,0 +1,22 @@
+body {
+  background-color: green;
+}
+p {
+  background-color: lime;
+  color: green;
+  margin-left: 5%;
+}
+.output{
+  background-color: green;
+  color: lime;
+  margin-left: 10%;
+}
+h1{
+  color: white;
+}
+p.stanley{
+  color:red;
+}
+.spot{
+  color:white;
+}
