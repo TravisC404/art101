@@ -1,0 +1,13 @@
+.halfwit {
+  clear:both;
+  width:30%;
+  float:left;
+  color:white;
+}
+.halfwitImage{
+  float:right;
+  width:50%;
+}
+div:not(#topbox){
+  clear:none;
+}
