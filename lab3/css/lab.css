@@ -3,10 +3,12 @@
   width:30%;
   float:left;
   color:white;
+  margin-left: 5%;
 }
 .halfwitImage{
   float:right;
   width:50%;
+  margin-right: 5%;
 }
 div:not(#topbox){
   clear:none;
