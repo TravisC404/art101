@@ -1,0 +1,10 @@
+div div:not(#topbox){
+  clear: both;
+  background-color: green;
+  color: lime;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+img {
+  width:50%;
+}
