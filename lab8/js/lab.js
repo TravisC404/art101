@@ -2,11 +2,13 @@
   I Travis Carlen wrote the following code the 7th of May 2022.
 */
 
+// Returns true false of number input evenness
 function isEven(x){
   var result = x % 2 == 0;
   return result;
 }
 
+// Returns true false of number input primeness, horribly optimized
 function isPrime(x){
   if (x == 1){
     return false;
@@ -23,6 +25,7 @@ function isPrime(x){
   return true;
 }
 
+// Generates list of integers 0-99
 var tokens = [0,0,0,0,0,0,0,0,0,0];
 tokens = tokens.map(function (x){
   var result = Math.floor(Math.random() * 100);
