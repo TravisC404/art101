@@ -1,0 +1,28 @@
+div div:not(#topbox){
+  clear: both;
+  background-color: green;
+  color: lime;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+img {
+  width:100%;
+  height:100%;
+  object-fit: fill;
+  padding: 0px;
+}
+div div#hello {
+  float:right;
+  border-radius: 25px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  width: 25%;
+  padding-bottom: 50px;
+}
+div#hello div{
+  background-color: white;
+  color: black;
+  padding-bottom: 25px;
+  font-size: 25px;
+}
