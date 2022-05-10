@@ -18,4 +18,6 @@ new3El.innerHTML = "I was added last, but I cut in line!";
 // Appending the new elements to the website
 outputEl.appendChild(new1El);
 outputEl.appendChild(new2El);
+
+// Inserts new element before the first element
 outputEl.insertBefore(new3El, outputEl.firstChild);
