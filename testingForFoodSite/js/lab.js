@@ -8,6 +8,7 @@ var name = '';
 // Grabbing all importent element from the website
 var recipesArray = fetch('js/recipes.JSON').then(res => res.json());
 console.log(recipesArray);
+console.log("Updated Version");
 function dictionizeRecipes(){
 
 }
