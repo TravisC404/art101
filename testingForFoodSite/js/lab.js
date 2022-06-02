@@ -46,11 +46,12 @@ function buildOutput(){
           }
         }
         if (!exists){
-          outputArray.push(recipeDictionary[ingredientInput[i]][k]);
+
+          outputArray[outputArray.length] = recipeDictionary[ingredientInput[i]][k];
         }
       }
       else{
-        outputArray.push(recipeDictionary[ingredientInput[i]][k]);
+        outputArray[0] = recipeDictionary[ingredientInput[i]][k];
       }
     }
     console.log("I ran :)");
