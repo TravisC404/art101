@@ -3,13 +3,12 @@
 */
 
 // All used global data
-var recipesArray = fetch('js/recipes.json')
+fetch('js/recipes.JSON')
   .then(response => response.json())
   .then(data => console.log(data));
 var recipeDictionary = {};
 var ingredientInput = [];
-console.log(recipesArray);
-console.log("Updated Version 0.3.3");
+console.log("Updated Version 0.3.4");
 
 
 
