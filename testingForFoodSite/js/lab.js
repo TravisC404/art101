@@ -3,14 +3,23 @@
 */
 
 // All used global data
-var recipesArray = fetch('js/recipes.JSON');
+var recipesArray = [];
+$.ajax({
+    url: 'recipes.json',
+    async: false,
+    dataType: 'json',
+    success: function (response){
+      recipesArray = response
+    }
+  }
+);
 recipesArray = recipesArray.json();
   //.then(response => response.json())
   //.then(data => console.log(data));
 var recipeDictionary = {};
 var ingredientInput = [];
 console.log(recipesArray);
-console.log("Updated Version 0.3.1");
+console.log("Updated Version 0.3.2");
 
 //Turns the imported recipe data into a dictionary organized by ingredients
 function dictionizeRecipes(){
