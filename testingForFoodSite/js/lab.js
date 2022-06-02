@@ -3,10 +3,9 @@
 */
 
 // All used global data
-var recipesArray = [];
-fetch('js/recipes.JSON')
+var recipesArray = fetch('js/recipes.JSON')
   .then(response => response.json())
-  .then(result => {recipesArray = result});
+  .then(data => console.log(data));
 var recipeDictionary = {};
 var ingredientInput = [];
 console.log(recipesArray);
