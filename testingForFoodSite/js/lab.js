@@ -10,12 +10,13 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Bread", "Peanut Butter"];
 var outputArray = [];
-console.log("Updated Version 0.4.0");
+console.log("Updated Version 0.4.1");
 
 
 
 //Turns the imported recipe data into a dictionary organized by ingredients
 function dictionizeRecipes(){
+  recipeDictionary = {};
   console.log(recipesArray);
   for (i = 0; i < recipesArray.length; i++){
     for (k = 0; k < recipesArray[i].ingredients.length; k++){
@@ -46,15 +47,14 @@ function buildOutput(){
           }
         }
         if (!exists){
-
           outputArray[outputArray.length] = recipeDictionary[ingredientInput[i]][k];
         }
       }
       else{
+        console.log("I ran :)");
         outputArray[0] = recipeDictionary[ingredientInput[i]][k];
       }
     }
-    console.log("I ran :)");
   }
 }
 
