@@ -8,7 +8,7 @@ fetch('js/recipes.JSON')
   .then(response => response.json())
   .then(data => recipesArray = data);
 var recipeDictionary = {};
-var ingredientInput = ["Bread", "Peanut Butter"];
+var ingredientInput = ["Bread", "Tomato", "Cheese"];
 var outputArray = [];
 console.log("Updated Version 0.4.3");
 
