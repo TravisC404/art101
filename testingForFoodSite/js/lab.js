@@ -6,11 +6,11 @@
 var recipesArray = [];
 fetch('js/recipes.JSON')
   .then(response => response.json())
-  .then(result => {recipesArray = result})});
+  .then(result => {recipesArray = result});
 var recipeDictionary = {};
 var ingredientInput = [];
 console.log(recipesArray);
-console.log("Updated Version 5.1");
+console.log("Updated Version 5.2");
 
 //Turns the imported recipe data into a dictionary organized by ingredients
 function dictionizeRecipes(){
