@@ -1,0 +1,39 @@
+div div:not(#topbox){
+  clear: both;
+  background-color: green;
+  color: lime;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+img {
+  width:100%;
+  height:100%;
+  object-fit: fill;
+  padding: 0px;
+}
+div p#smol {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+div.row {
+  height:110px;
+}
+div.item {
+  clear:none !important;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 2% !important;
+  background-color: blue !important;
+}
+div.item-clicked {
+  clear:none !important;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin-right: 2% !important;
+  background-color: white !important;
+}
