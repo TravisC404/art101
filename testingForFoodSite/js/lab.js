@@ -54,6 +54,7 @@ function buildOutput(){
         }
       }
   }
+  console.log("I ran :)");
 }
 
 //Build array based
@@ -66,13 +67,13 @@ function buildSite(){
 }
 
 function processOutput(){
-  getInput();
+  //getInput();
   dictionizeRecipes();
   buildOutput();
-  sortOutput();
-  buildSite();
+  //sortOutput();
+  //buildSite();
 }
 
 
 var buttonEl = document.getElementById("dictionize");
-buttonEl.addEventListener("click", dictionizeRecipes);
+buttonEl.addEventListener("click", processOutput);
