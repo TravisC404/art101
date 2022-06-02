@@ -9,7 +9,7 @@ fetch('js/recipes.JSON')
   .then(data => recipesArray = data);
 var recipeDictionary = {};
 var ingredientInput = ["Bread", "Peanut Butter"];
-var outputArray = [];
+var outputArray = null;
 console.log("Updated Version 0.4.1");
 
 
@@ -38,7 +38,12 @@ function getInput(){
 function buildOutput(){
   for (i = 0; i < ingredientInput.length; i++){
     for (k = 0; k < recipeDictionary[ingredientInput[i]]; i++){
-      if (outputArray.length!=0){
+      if (outputArray==null){
+        console.log("I ran :)");
+        outputArray = []
+        outputArray[0] = recipeDictionary[ingredientInput[i]][k];
+      }
+      else{
         var exists = false;
         for (n = 0; n < outputArray.length; n++){
           if (outputArray[n].name==recipeDictionary[ingredientInput[i]][k].name){
@@ -49,10 +54,6 @@ function buildOutput(){
         if (!exists){
           outputArray[outputArray.length] = recipeDictionary[ingredientInput[i]][k];
         }
-      }
-      else{
-        console.log("I ran :)");
-        outputArray[0] = recipeDictionary[ingredientInput[i]][k];
       }
     }
   }
