@@ -9,7 +9,7 @@ fetch('js/recipes.JSON')
   .then(data => recipesArray = data);
 var recipeDictionary = {};
 var ingredientInput = [];
-console.log("Updated Version 0.3.5");
+console.log("Updated Version 0.3.6");
 
 
 
@@ -18,7 +18,7 @@ function dictionizeRecipes(){
   console.log(recipesArray);
   for (i = 0; i < recipesArray.length; i++){
     for (k = 0; k < recipesArray[i].ingredients.length; k++){
-      recipeDictionary[recipesArray[i].ingredients[k]].push(recipesArray[i]);
+      recipeDictionary[recipesArray[i].ingredients.push(recipesArray[i]);
     }
   }
   console.log(recipeDictionary);
