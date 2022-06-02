@@ -6,4 +6,8 @@
 var name = '';
 
 // Grabbing all importent element from the website
-fetch('js/recipes.JSON').then(res => res.json()).then(data => console.log(data));
+var recipesArray = fetch('js/recipes.JSON').then(res => res.json());
+console.log(recipesArray);
+function dictionizeRecipes(){
+
+}
