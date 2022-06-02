@@ -18,6 +18,9 @@ function dictionizeRecipes(){
   console.log(recipesArray);
   for (i = 0; i < recipesArray.length; i++){
     for (k = 0; k < recipesArray[i].ingredients.length; k++){
+      if (recipeDictionary[recipesArray[i].ingredients[k]]==null){
+        recipeDictionary[recipesArray[i].ingredients[k]]=[];
+      }
       recipeDictionary[recipesArray[i].ingredients].push(recipesArray[i]);
     }
   }
