@@ -1,14 +1,14 @@
 [
   {
-    "name":"BLT"
+    "name":"BLT",
     "ingredients": ["Bacon", "Lettuce", "Tomato", "Bread"],
     "hyperlink":"",
     "description": "Description here",
-    "image": "hyperlink here"
-    "priority": 0,
+    "image": "hyperlink here",
+    "priority": 0
   },
   {
-    "name":"PBJ Sandwich"
+    "name":"PBJ Sandwich",
     "ingredients": ["Peanut Butter", "Jelly", "Bread"],
     "hyperlink":"https:",
     "description": "Description here",
