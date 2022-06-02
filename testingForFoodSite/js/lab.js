@@ -69,7 +69,7 @@ function buildSite(){
 function processOutput(){
   //getInput();
   dictionizeRecipes();
-  buildOutput();
+  //buildOutput();
   //sortOutput();
   //buildSite();
 }
