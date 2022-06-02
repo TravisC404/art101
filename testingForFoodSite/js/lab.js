@@ -19,9 +19,12 @@ function dictionizeRecipes(){
       recipeDictionary[recipesArray[i].ingredients[k]] = recipesArray[i];
     }
   }
+  console.log(recipeDictionary);
 }
 
 //Gets ingredient input from site elements, stores into ingredientInput array
 function getInput(){
 
 }
+var buttonEl = document.getElementById("dictionize");
+buttonEl.addEventListener("click", dictionizeRecipes);
