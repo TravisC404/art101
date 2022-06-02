@@ -9,8 +9,8 @@ fetch('js/recipes.JSON')
   .then(data => recipesArray = data);
 var recipeDictionary = {};
 var ingredientInput = ["Bread", "Peanut Butter"];
-var outputArray = null;
-console.log("Updated Version 0.4.1");
+var outputArray = [];
+console.log("Updated Version 0.4.2");
 
 
 
@@ -37,10 +37,9 @@ function getInput(){
 //Build array based on ingredientInput, lightly sorted
 function buildOutput(){
   for (i = 0; i < ingredientInput.length; i++){
-    for (k = 0; k < recipeDictionary[ingredientInput[i]]; i++){
-      if (outputArray==null){
-        console.log("I ran :)");
-        outputArray = []
+    for (k = 0; k < recipeDictionary[ingredientInput[i]]; k++){
+      if (outputArray.length==0){
+        outputArray = [];
         outputArray[0] = recipeDictionary[ingredientInput[i]][k];
       }
       else{
