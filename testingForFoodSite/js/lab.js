@@ -8,7 +8,8 @@ fetch('js/recipes.JSON')
   .then(response => response.json())
   .then(data => recipesArray = data);
 var recipeDictionary = {};
-var ingredientInput = [];
+var ingredientInput = ["Bread", "Peanut Butter"];
+var outputArray = [];
 console.log("Updated Version 0.3.7");
 
 
@@ -31,5 +32,47 @@ function dictionizeRecipes(){
 function getInput(){
 
 }
+
+//Build array based on ingredientInput, lightly sorted
+function buildOutput(){
+  for (i = 0; i < ingredientInput.length; i++){
+      for (k = 0; k < recipeDictionary[ingredientInput[i]]; i++){
+        if (outputArray.length!=0){
+          var exists = false;
+          for (n = 0; n < outputArray.length; n++){
+            if (outputArray[n].name==recipeDictionary[ingredientInput[i]][k].name){
+              exists = true;
+              outputArray[n].priority += 1;
+            }
+          }
+          if (!exists){
+            outputArray.push(recipeDictionary[ingredientInput[i]][k]);
+          }
+        }
+        else{
+          outputArray.push(recipeDictionary[ingredientInput[i]][k]);
+        }
+      }
+  }
+}
+
+//Build array based
+function sortOutput(){
+
+}
+
+function buildSite(){
+
+}
+
+function processOutput(){
+  getInput();
+  dictionizeRecipes();
+  buildOutput();
+  sortOutput();
+  buildSite();
+}
+
+
 var buttonEl = document.getElementById("dictionize");
 buttonEl.addEventListener("click", dictionizeRecipes);
