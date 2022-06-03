@@ -10,7 +10,7 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
 var outputArray = [];
-console.log("Version 0.6.5");
+console.log("Version 0.6.6");
 //var veggie = document.getElementById('veggie-recipe');
 //var fruit = document.getElementById('fruit-recipe');
 //var protien = document.getElementById('protein-recipe');
@@ -92,8 +92,8 @@ function buildSite(){
     tempImage.setAttribute("src", outputArray.image);
     tempRecipe.appendChild(tempImage);
     var ingredientList = "Ingredients:";
-    for (k = 0; k < outputArray[i].ingredientList.length; k++){
-      ingredientList += " " + outputArray[i].ingredientList[k] + ",";
+    for (k = 0; k < outputArray[i].ingredients.length; k++){
+      ingredientList += " " + outputArray[i].ingredients[k] + ",";
     }
     var tempIngredientList = document.createElement('p');
     tempIngredientList.innerHTML = ingredientList;
