@@ -10,7 +10,7 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Bread", "Tomato", "Cheese", "Bacon"];
 var outputArray = [];
-console.log("Updated Version 0.5.0");
+console.log("Updated Version 0.5.1");
 
 
 
@@ -59,8 +59,8 @@ function buildOutput(){
 
 //Build array based
 function sortOutput(){
-  for (i = 0; i < outputArray.length; i++){
-    for (k = 0; k < outputArray.length - i; k++){
+  for (i = 0; i < outputArray.length - 1; i++){
+    for (k = 0; k < outputArray.length - i - 1; k++){
       if (outputArray[k].priority > outputArray[k + 1].priority){
         var temp = outputArray[k];
         outputArray[k] = outputArray[k + 1];
