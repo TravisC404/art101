@@ -10,7 +10,7 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
 var outputArray = [];
-console.log("Updated Version 0.6.0");
+console.log("Version 0.6.4");
 //var veggie = document.getElementById('veggie-recipe');
 //var fruit = document.getElementById('fruit-recipe');
 //var protien = document.getElementById('protein-recipe');
@@ -85,9 +85,19 @@ function buildSite(){
     var tempHyperLink = document.createElement('a');
     tempHyperLink.setAttribute("href", outputArray.hyperlink);
     var tempTitle = document.createElement('p');
-    tempTitle.innerHTML = outputArray[i].name;
+    tempTitle.innerHTML = outputArray[i].name + (i==0)?' - BEST MATCH':'';
     tempHyperLink.appendChild(tempTitle);
     tempRecipe.appendChild(tempHyperLink);
+    var tempImage = document.createElement('image');
+    tempImage.setAttribute("src", outputArray.image);
+    tempRecipe.appendChild(tempImage);
+    var ingredientList = "Ingredients:";
+    for (k = 0; k < outputArray[i].ingredientList.length; k++){
+      ingredientList += " " + outputArray[i].ingredientList[k] + ",";
+    }
+    var tempIngredientList = document.createElement('p');
+    tempIngredientList.innerHTML = ingredientList;
+    outputEl.appendChild(tempIngredientList);
     outputEl.appendChild(tempRecipe)
   }
 }
@@ -101,5 +111,5 @@ function processOutput(){
 }
 
 
-var buttonEl = document.getElementById("dictionize");
+var buttonEl = document.getElementById("submit");
 buttonEl.addEventListener("click", processOutput);
