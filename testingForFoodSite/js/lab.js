@@ -10,7 +10,7 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
 var outputArray = [];
-console.log("Version 0.6.4");
+console.log("Version 0.6.5");
 //var veggie = document.getElementById('veggie-recipe');
 //var fruit = document.getElementById('fruit-recipe');
 //var protien = document.getElementById('protein-recipe');
