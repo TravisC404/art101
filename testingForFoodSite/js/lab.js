@@ -8,9 +8,9 @@ fetch('js/recipes.JSON')
   .then(response => response.json())
   .then(data => recipesArray = data);
 var recipeDictionary = {};
-var ingredientInput = ["Bread", "Tomato", "Cheese"];
+var ingredientInput = ["Bread", "Tomato", "Cheese", "Bacon"];
 var outputArray = [];
-console.log("Updated Version 0.4.3");
+console.log("Updated Version 0.5.0");
 
 
 
@@ -37,12 +37,8 @@ function getInput(){
 //Build array based on ingredientInput, lightly sorted
 function buildOutput(){
   for (i = 0; i < ingredientInput.length; i++){
-    console.log(0);
     for (k = 0; k < recipeDictionary[ingredientInput[i]].length; k++){
-      console.log(1);
-      console.log("Output Array Length" + outputArray.length);
       if (outputArray.length==0){
-        console.log(2);
         outputArray[0] = recipeDictionary[ingredientInput[i]][k];
       }
       else{
@@ -63,7 +59,15 @@ function buildOutput(){
 
 //Build array based
 function sortOutput(){
-
+  for (i = 0; i < outputArray.length; i++){
+    for (k = 0; k < outputArray.length - i; k++){
+      if (outputArray[k].priority > outputArray[k + 1].priority){
+        var temp = outputArray[k];
+        outputArray[k] = outputArray[k + 1];
+        outputArray[k + 1] = temp;
+      }
+    }
+  }
 }
 
 function buildSite(){
@@ -73,8 +77,8 @@ function buildSite(){
 function processOutput(){
   //getInput();
   dictionizeRecipes();
-  //buildOutput();
-  //sortOutput();
+  buildOutput();
+  sortOutput();
   //buildSite();
 }
 
