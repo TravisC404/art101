@@ -10,7 +10,7 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
 var outputArray = [];
-console.log("Version 0.6.8");
+console.log("Version 0.6.10");
 //var veggie = document.getElementById('veggie-recipe');
 //var fruit = document.getElementById('fruit-recipe');
 //var protien = document.getElementById('protein-recipe');
@@ -90,6 +90,7 @@ function buildSite(){
       tempTitle.innerHTML += ' - BEST MATCH';
     }
     tempHyperLink.appendChild(tempTitle);
+    tempRecipe.appendChild(tempHyperLink);
     var tempImage = document.createElement('image');
     tempImage.setAttribute("src", outputArray.image);
     tempRecipe.appendChild(tempImage);
@@ -99,8 +100,7 @@ function buildSite(){
     }
     var tempIngredientList = document.createElement('p');
     tempIngredientList.innerHTML = ingredientList.slice(0, -1);
-    outputEl.appendChild(tempIngredientList);
-    tempRecipe.appendChild(tempHyperLink);
+    tempRecipe.appendChild(tempIngredientList);
     outputEl.appendChild(tempRecipe);
   }
 }
