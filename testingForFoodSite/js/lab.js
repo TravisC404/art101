@@ -10,12 +10,12 @@ fetch('js/recipes.JSON')
 var recipeDictionary = {};
 var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
 var outputArray = [];
-console.log("Updated Version 0.5.1");
+console.log("Updated Version 0.6.0");
 //var veggie = document.getElementById('veggie-recipe');
 //var fruit = document.getElementById('fruit-recipe');
 //var protien = document.getElementById('protein-recipe');
 //var dairy = document.getElementById('dairy-recipe');
-//var outputEl = document.getElementById('output');
+var outputEl = document.getElementById('output');
 
 
 //Turns the imported recipe data into a dictionary organized by ingredients
