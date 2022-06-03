@@ -8,10 +8,14 @@ fetch('js/recipes.JSON')
   .then(response => response.json())
   .then(data => recipesArray = data);
 var recipeDictionary = {};
-var ingredientInput = ["Bread", "Tomato", "Cheese", "Bacon", "Lettuce"];
+var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
 var outputArray = [];
 console.log("Updated Version 0.5.1");
-
+//var veggie = document.getElementById('veggie-recipe');
+//var fruit = document.getElementById('fruit-recipe');
+//var protien = document.getElementById('protein-recipe');
+//var dairy = document.getElementById('dairy-recipe');
+//var outputEl = document.getElementById('output');
 
 
 //Turns the imported recipe data into a dictionary organized by ingredients
@@ -31,7 +35,10 @@ function dictionizeRecipes(){
 
 //Gets ingredient input from site elements, stores into ingredientInput array
 function getInput(){
-
+  ingredientInput[0] = veggie.options[veggie.selectedIndex].value;
+  ingredientInput[1] = fruit.options[fruit.selectedIndex].value;
+  ingredientInput[2] = protien.options[protien.selectedIndex].value;
+  ingredientInput[3] = dairy.options[dairy.selectedIndex].value;
 }
 
 //Build array based on ingredientInput, lightly sorted
@@ -71,7 +78,18 @@ function sortOutput(){
 }
 
 function buildSite(){
-
+  outputEl.innerHTML = '';
+  for (i = 0; i < outputArray.length; i++){
+    var tempRecipe = document.createElement("div");
+    tempRecipe.setAttribute("class", "recipeBox");
+    var tempHyperLink = document.createElement('a');
+    tempHyperLink.setAttribute("href", outputArray.hyperlink);
+    var tempTitle = document.createElement('p');
+    tempTitle.innerHTML = outputArray[i].name;
+    tempHyperLink.appendChild(tempTitle);
+    tempRecipe.appendChild(tempHyperLink);
+    outputEl.appendChild(tempRecipe)
+  }
 }
 
 function processOutput(){
@@ -79,7 +97,7 @@ function processOutput(){
   dictionizeRecipes();
   buildOutput();
   sortOutput();
-  //buildSite();
+  buildSite();
 }
 
 
