@@ -8,20 +8,19 @@ fetch('js/recipes.JSON')
   .then(response => response.json())
   .then(data => recipesArray = data);
 var recipeDictionary = {};
-var ingredientInput = ["Tomato", "Bread", "Bacon", "Cheese"];
+var ingredientInput = [];
 var outputArray = [];
 console.log("Version 0.6.10");
-//var veggie = document.getElementById('veggie-recipe');
-//var fruit = document.getElementById('fruit-recipe');
-//var protien = document.getElementById('protein-recipe');
-//var dairy = document.getElementById('dairy-recipe');
+var veggie = document.getElementById('veggie-recipe');
+var fruit = document.getElementById('fruit-recipe');
+var protien = document.getElementById('protein-recipe');
+var dairy = document.getElementById('dairy-recipe');
 var outputEl = document.getElementById('output');
 
 
 //Turns the imported recipe data into a dictionary organized by ingredients
 function dictionizeRecipes(){
   recipeDictionary = {};
-  console.log(recipesArray);
   for (i = 0; i < recipesArray.length; i++){
     for (k = 0; k < recipesArray[i].ingredients.length; k++){
       if (recipeDictionary[recipesArray[i].ingredients[k]]==null){
@@ -30,10 +29,9 @@ function dictionizeRecipes(){
       recipeDictionary[recipesArray[i].ingredients[k]].push(recipesArray[i]);
     }
   }
-  console.log(recipeDictionary);
 }
 
-//Gets ingredient input from site elements, stores into ingredientInput array
+//Gets ingredient input from site elements, stores into ingredientInput array, might change if the website changes
 function getInput(){
   ingredientInput[0] = veggie.options[veggie.selectedIndex].value;
   ingredientInput[1] = fruit.options[fruit.selectedIndex].value;
@@ -77,11 +75,13 @@ function sortOutput(){
   }
 }
 
+//Probably a nicer way to  do this, but oh well
 function buildSite(){
   outputEl.innerHTML = '';
   for (i = 0; i < outputArray.length; i++){
     var tempRecipe = document.createElement("div");
     tempRecipe.setAttribute("class", "recipeBox");
+    var tempTextBox = document.createElement("div");
     var tempHyperLink = document.createElement('a');
     tempHyperLink.setAttribute("href", outputArray.hyperlink);
     var tempTitle = document.createElement('p');
@@ -90,7 +90,7 @@ function buildSite(){
       tempTitle.innerHTML += ' - BEST MATCH';
     }
     tempHyperLink.appendChild(tempTitle);
-    tempRecipe.appendChild(tempHyperLink);
+    tempTextBox.appendChild(tempHyperLink);
     var tempImage = document.createElement('image');
     tempImage.setAttribute("src", outputArray.image);
     tempRecipe.appendChild(tempImage);
@@ -100,13 +100,17 @@ function buildSite(){
     }
     var tempIngredientList = document.createElement('p');
     tempIngredientList.innerHTML = ingredientList.slice(0, -1);
-    tempRecipe.appendChild(tempIngredientList);
+    var tempDescription = document.createElement('p');
+    tempDescription.innerHTML = outputArray[i].description;
+    tempTextBox.appendChild(tempIngredientList);
+    tempTextBox.appendChild(tempDescription);
+    tempRecipe.appendChild(tempTextBox);
     outputEl.appendChild(tempRecipe);
   }
 }
 
 function processOutput(){
-  //getInput();
+  getInput();
   dictionizeRecipes();
   buildOutput();
   sortOutput();
