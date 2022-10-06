@@ -1,0 +1,24 @@
+body {
+  background-color: #DD55DD
+}
+#intro {
+  border-radius: 10px;
+  background-color: #FFCCFF;
+  padding: 20px;
+  text-align: center;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+div {
+  background-color: #DD99DD;
+  padding:10px;
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+}
+#riddle {
+  background-color: #550055;
+  color: #FFFFFF;
+  margin-top: 1%;
+}
