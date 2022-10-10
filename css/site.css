@@ -1,0 +1,47 @@
+#dadpic {
+  width:50%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#toolbar {
+  display: block;
+  height:50px;
+  background-color: #DDDBF1;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.in {
+  padding: 10px;
+  display: inline-block;
+}
+
+.box {
+  background-color: #3C4F76;
+  padding:10px;
+  border-radius: 20px;
+  margin-left: 1px;
+}
+
+body{
+  background-color: #383F51;
+}
+
+.topic{
+  background-color: #DDDBF1;
+  margin:2%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+a:link{
+  color:#D1BEB0;
+}
+a:visited{
+  color:#D1BEB0;
+}
+a:hover{
+  color:#AB9F9D;
+}
