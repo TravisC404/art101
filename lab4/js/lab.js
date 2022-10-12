@@ -11,7 +11,9 @@
   //Start Battle, place both player and enemy pokemon on screen
   //Battle Loop
   //Get Player Input
-    //If “attack,” save attack data. If “item,” run item usage. If “flee” and is not a trainer battle, roll flee chance. If the flee is successful, end the battle loop.
+    //If “attack,” save attack data.
+    //If “item,” run item usage.
+    //If “flee” and is not a trainer battle, roll flee chance. If the flee is successful, end the battle loop.
   //If player attack
     //Compare Player and Enemy Speeds
     //If player first, run player attack then enemy attack
