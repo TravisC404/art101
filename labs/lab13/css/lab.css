@@ -1,0 +1,10 @@
+#output-0,#output-1,#output-2 {
+  width: 25%;
+  float:left;
+}
+#output p {
+  margin-bottom: 10px;
+}
+#output{
+  height:auto;
+}

@@ -1,7 +1,7 @@
 /*
-* Creates fun buttons, yipee
+* Sorts string input into Hogwarts Houses, capacity to expand
 * Travis Carlen.
-* 11.7.2022
+* 11.9.2022
 */
 
 var HouseArray = ["Gryffindor", "Ravenclaw", "Slytherin", "Hufflepuff"];
