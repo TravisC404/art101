@@ -46,4 +46,4 @@ function outputs(){
   outputEl.appendChild(p);
 }
 
-setTimeout(outputs, 500);
+outputs();
