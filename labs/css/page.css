@@ -10,11 +10,22 @@ body{
   margin: 0px;
 }
 .lab{
+  z-index: -1;
   width:25%;
   overflow: hidden;
   height:200px;
   border-radius: 25px;
-}
-.lab{
   float:left;
+}
+.lab-label {
+  background-color: black;
+  position: relative;
+  padding: 10px;
+  z-index: 1;
+}
+#toggle {
+  border-color: white;
+  border-width: thin;
+  border:solid;
+  border-top: none;
 }
