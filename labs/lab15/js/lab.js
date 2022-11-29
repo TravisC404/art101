@@ -1,8 +1,8 @@
 /*
-*
-*
-*
-*
+* Accesses DND 5e API via ajax and allows users to select one of the classes,
+* then interprets saving throws of said class into insults via another access
+* Travis Carlen.
+* 11.21.2022
 */
 var input = $("#class-select");
 
